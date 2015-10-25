@@ -202,15 +202,15 @@
   <screen name="InfoBar" position="0,0" size="1283,723" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
     <!--/* TSUpdater -->
     <!--/* TSUpdaterPKGInfo -->
-    <!--ePixmap pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" alphatest="blend" />
-  <widget source="HbbtvApplication" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" size="64,24" zPosition="10" alphatest="blend">
-    <convert type="ConditionalShowHide" />
-  </widget-->
-    <ePixmap alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" />
+    <ePixmap pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" alphatest="blend" />
+    <widget source="HbbtvApplication" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" size="64,24" zPosition="10" alphatest="blend">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!--ePixmap alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" />
     <widget alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" render="Pixmap" size="64,24" source="session.CurrentService" zPosition="2">
       <convert type="ServiceInfo">HasHBBTV</convert>
       <convert type="ConditionalShowHide" />
-    </widget>
+    </widget-->
     <ePixmap pixmap="ts-MetrixHD/icons/ico_dolby_off.png" position="1020,658" size="64,23" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_dolby_on.png" position="1020,658" size="64,23" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsMultichannel</convert>
@@ -269,8 +269,8 @@
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" typewriter="on" position="285,548" size="788,56" font="SetrixHD; 40" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1">
-      <convert type="EventName">NameNow</convert>
+    <widget source="session.Event_Now" render="Label" position="285,548" size="788,56" font="SetrixHD; 40" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="1125,576" size="113,30" font="Regular; 19" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
       <convert type="EventTime">Remaining</convert>
@@ -291,8 +291,8 @@
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" typewriter="on" position="441,614" size="670,40" font="Regular; 24" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
-      <convert type="EventName">NameNext</convert>
+    <widget source="session.Event_Next" render="Label" position="441,614" size="670,40" font="Regular; 24" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="1124,614" size="113,30" font="Regular; 18" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
       <convert type="EventTime">Duration</convert>
@@ -391,15 +391,15 @@
   <screen name="SecondInfoBar" position="0,0" size="1281,723" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
     <!--/* TSUpdaterInfo Pix -->
     <!--/* TSUpdaterPKGInfo -->
-    <!--ePixmap pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" alphatest="blend" />
     <widget source="HbbtvApplication" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" size="64,24" zPosition="10" alphatest="blend">
       <convert type="ConditionalShowHide" />
-    </widget-->
-    <ePixmap alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" />
+    </widget>
+    <!--ePixmap alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" />
     <widget alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" render="Pixmap" size="64,24" source="session.CurrentService" zPosition="2">
       <convert type="ServiceInfo">HasHBBTV</convert>
       <convert type="ConditionalShowHide" />
-    </widget>
+    </widget-->
     <eLabel position="-1,551" zPosition="-10" size="1283,170" backgroundColor="metrixBackground" transparent="0" />
     <ePixmap pixmap="ts-MetrixHD/icons/ico_dolby_off.png" position="1020,658" size="64,23" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_dolby_on.png" position="1020,658" size="64,23" zPosition="2" alphatest="blend">
@@ -487,8 +487,8 @@
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" typewriter="on" position="286,548" size="788,56" font="SetrixHD; 40" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1">
-      <convert type="EventName">NameNow</convert>
+    <widget source="session.Event_Now" render="Label" position="286,548" size="788,56" font="SetrixHD; 40" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="1125,576" size="113,30" font="Regular; 19" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
       <convert type="EventTime">Remaining</convert>
@@ -509,8 +509,8 @@
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" typewriter="on" position="441,614" size="670,40" font="Regular; 24" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
-      <convert type="EventName">NameNext</convert>
+    <widget source="session.Event_Next" render="Label" position="441,614" size="670,40" font="Regular; 24" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="1124,614" size="113,30" font="Regular; 18" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
       <convert type="EventTime">Duration</convert>
@@ -641,15 +641,15 @@
   <screen name="SecondInfoBarEPG" position="0,0" size="1281,723" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
     <!--/* TSUpdaterInfo Pix -->
     <!--/* TSUpdaterPKGInfo -->
-    <!--ePixmap pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" alphatest="blend" />
     <widget source="HbbtvApplication" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" size="64,24" zPosition="10" alphatest="blend">
       <convert type="ConditionalShowHide" />
-    </widget-->
-    <ePixmap alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" />
+    </widget>
+    <!--ePixmap alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_off.png" position="907,656" size="64,24" zPosition="1" />
     <widget alphatest="blend" pixmap="ts-MetrixHD/icons/ico_hbbtv_on.png" position="907,656" render="Pixmap" size="64,24" source="session.CurrentService" zPosition="2">
       <convert type="ServiceInfo">HasHBBTV</convert>
       <convert type="ConditionalShowHide" />
-    </widget>
+    </widget-->
     <eLabel position="-1,551" zPosition="-10" size="1283,170" backgroundColor="metrixBackground" transparent="0" />
     <ePixmap pixmap="ts-MetrixHD/icons/ico_dolby_off.png" position="1020,658" size="64,23" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixHD/icons/ico_dolby_on.png" position="1020,658" size="64,23" zPosition="2" alphatest="blend">
@@ -751,8 +751,8 @@
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" typewriter="on" position="286,548" size="788,56" font="SetrixHD; 40" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1">
-      <convert type="EventName">NameNow</convert>
+    <widget source="session.Event_Now" render="Label" position="286,548" size="788,56" font="SetrixHD; 40" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="1125,576" size="113,30" font="Regular; 19" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
       <convert type="EventTime">Remaining</convert>
@@ -773,8 +773,8 @@
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" typewriter="on" position="441,614" size="670,40" font="Regular; 24" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
-      <convert type="EventName">NameNext</convert>
+    <widget source="session.Event_Next" render="Label" position="441,614" size="670,40" font="Regular; 24" halign="left" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1" valign="top">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="1124,614" size="113,30" font="Regular; 18" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
       <convert type="EventTime">Duration</convert>
@@ -971,95 +971,95 @@
     <ePixmap position="310,85" size="256,256" pixmap="ts-MetrixHD/icons/tuner.png" alphatest="blend" />
   </screen>
   <screen name="menu_mainmenu" position="0,0" size="1312,720" title="Main menu" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
-    <!-- /*ClockWidget -->
-    <widget source="global.CurrentTime" render="Label" position="450,401" size="169,80" font="SetrixHD; 60" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="290,444" size="148,29" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
-      <convert type="ClockToText">Format: %e. %B</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="313,415" size="125,30" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
-      <convert type="ClockToText">Format: %A</convert>
-    </widget>
-    <eLabel position="265,410" zPosition="-1" size="340,70" backgroundColor="metrixBackground" transparent="0" />
-    <!-- ClockWidget */ -->
-    <widget source="title" render="Label" position="20,552" size="1273,296" font="SetrixHD; 150" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="top" zPosition="-50" />
-    <widget source="menu" render="Listbox" position="636,60" size="399,555" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
+  <!-- /*ClockWidget -->
+  <widget source="global.CurrentTime" render="Label" position="450,401" size="169,80" font="SetrixHD; 60" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="290,444" size="148,29" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+    <convert type="ClockToText">Format: %e. %B</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="313,415" size="125,30" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+    <convert type="ClockToText">Format: %A</convert>
+  </widget>
+  <eLabel position="265,410" zPosition="-1" size="340,70" backgroundColor="metrixBackground" transparent="0" />
+  <!-- ClockWidget */ -->
+  <widget source="title" render="Label" position="20,552" size="1273,296" font="SetrixHD; 150" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="top" zPosition="-50" />
+  <widget source="menu" render="Listbox" position="636,60" size="399,555" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+    <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ], "fonts": [gFont("SetrixHD", 30)], "itemHeight": 60 }
 </convert>
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/pvmc.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">pvmc_mainmenu</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/tsmedia.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">TSmedia_mainmenu</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/taddons.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">TSpanel_mainmenu</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/tsmedia.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">TSonlineTvMOD</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/shutdown.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">standby_restart_list</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/setup.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">setup_selection</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/plugin.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">plugin_selection</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/info.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">info_screen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/scart.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">scart_switch</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/timer.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">timer_edit</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/media.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">media_player</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/dvd.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">dvd_player</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/sub.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">subtitle_selection</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/hbbtv.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">hbbtv_browser</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/webb.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">web_browser</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/filesexplorer.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">filecommand</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/mqb.png" position="310,85" size="256,256" alphatest="blend">
-      <convert type="MenuEntryCompare">multi_quick</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel position="264,51" zPosition="-1" size="340,320" backgroundColor="metrixBackground" transparent="0" />
-    <eLabel name="" position="645,51" zPosition="-11" size="382,565" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
-  </screen>
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/pvmc.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">pvmc_mainmenu</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/tsmedia.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">TSmedia_mainmenu</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/taddons.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">TSpanel_mainmenu</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/tsmedia.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">TSonlineTvMOD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/shutdown.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">standby_restart_list</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/setup.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">setup_selection</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/plugin.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">plugin_selection</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/info.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">info_screen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/scart.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">scart_switch</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/timer.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">timer_edit</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/media.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">media_player</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/dvd.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">dvd_player</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/sub.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">subtitle_selection</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/hbbtv.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">hbbtv_browser</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/webb.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">web_browser</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/tsimage/menu/filesexplorer.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">filecommand</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="menu" render="Pixmap" pixmap="ts-MetrixHD/icons/mqb.png" position="310,85" size="256,256" alphatest="blend">
+    <convert type="MenuEntryCompare">multi_quick</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel position="264,51" zPosition="-1" size="340,320" backgroundColor="metrixBackground" transparent="0" />
+  <eLabel name="" position="645,51" zPosition="-11" size="382,565" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
+</screen>
   <screen name="menu_system" position="0,center" size="1280,720" title="Main menu" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
     <eLabel position="264,51" zPosition="-1" size="340,320" backgroundColor="metrixBackground" transparent="0" />
     <!-- /*ClockWidget-->
@@ -1185,12 +1185,12 @@
     <widget source="Tuner2" render="Label" position="70,311" size="700,40" font="SetrixHD; 24" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
     <widget source="Tuner3" render="Label" position="70,351" size="700,40" font="SetrixHD; 24" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
     <widget source="IPHeader" render="Label" position="71,439" size="700,40" font="SetrixHD; 26" foregroundColor="metrixAccent2" backgroundColor="metrixBackground" transparent="0" />
-    <widget source="ipA" render="Label" position="70,480" size="700,40" font="SetrixHD; 26" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="ipA" render="Label" position="70,479" size="700,40" font="SetrixHD; 26" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
     <widget source="HDDHeader" render="Label" position="70,520" size="700,40" font="SetrixHD; 26" foregroundColor="metrixAccent2" backgroundColor="metrixBackground" transparent="1" />
     <widget source="hddA" render="Label" position="70,560" size="700,65" font="SetrixHD; 24" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
     <eLabel text="skin by iMaxxx" position="961,418" size="270,80" font="SetrixHD; 40" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" valign="top" halign="left" />
     <eLabel text="mod erolmutlu" position="961,463" size="240,30" font="SetrixHD; 20" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" valign="top" halign="right" />
-    <eLabel text="ts-MetrixHD skin for Open PLI 4.0 support www.imajteam.com" position="70,480" size="700,40" font="SetrixHD; 20" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" valign="top" halign="left" />
+    <eLabel text="ts-MetrixHD skin for Open PLI 4.0 support www.imajteam.com" position="70,400" size="700,40" font="SetrixHD; 20" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" valign="top" halign="left" />
     <ePixmap position="957,59" size="256,256" zPosition="2" pixmap="ts-MetrixHD/icons/info.png" transparent="1" alphatest="blend" />
     <eLabel position="950,51" zPosition="-1" size="270,270" backgroundColor="metrixBackground" transparent="0" />
     <!-- /*ClockWidget-->
@@ -1346,9 +1346,12 @@
     <widget position="117,278" progress_pointer="ts-MetrixHD/SkinDesign/pointer.png:12,2" render="PositionGauge" size="206,14" source="ServiceEvent" transparent="1" zPosition="2">
       <convert type="EventPosition">Gauge</convert>
     </widget>
-    <widget source="ServiceEvent" render="RunningText" position="63,308" size="320,191" zPosition="2" valign="top" font="Regular;20" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" emptyText="" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground">
+    <widget source="ServiceEvent" render="Label" position="63,308" size="320,191" font="Regular;19" foregroundColor="metrixAccent1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
+    <!--widget source="ServiceEvent" render="RunningText" position="63,308" size="320,191" zPosition="2" valign="top" font="Regular;20" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" emptyText="" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget-->
     <!--widget source="ServiceEvent" render="TSNextEvent" position="63,518" size="320,53" font="Regular;19" backgroundColor="metrixBackground" foregroundColor="metrixAccent2" transparent="1">
     </widget> -->
     <widget source="ServiceEvent" render="EventListDisplay" column0="0,60,metrixAccent2,Regular,20,0,0" column1="60,260,metrixAccent2,Regular,20,0,1" position="63,508" size="320,60" rowHeight="28" backgroundColor="metrixBackground" transparent="1">
@@ -2433,32 +2436,46 @@
     <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="ts-MetrixHD/icons/look.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
-    <eLabel name="" position="0,0" zPosition="-11" size="1281,50" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
-    <ePixmap position="267,114" size="256,256" pixmap="ts-MetrixHD/icons/plugin.png" alphatest="blend" />
-    <!-- /*ClockWidget-->
-    <eLabel position="208,91" zPosition="-1" size="366,300" backgroundColor="metrixBackground" transparent="0" />
-    <!-- /*ClockWidget-->
-    <widget source="global.CurrentTime" render="Label" position="415,401" size="169,80" font="SetrixHD; 60" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="265,444" size="148,29" font="SetrixHD; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
-      <convert type="ClockToText">Format: %e. %B</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="287,415" size="125,30" font="SetrixHD; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
-      <convert type="ClockToText">Format: %A</convert>
-    </widget>
-    <eLabel position="208,410" zPosition="-1" size="368,70" backgroundColor="metrixBackground" transparent="0" />
-    <!--ClockWidget */-->
-    <eLabel text="Plugin browser" position="20,552" size="1273,296" font="SetrixHD; 150" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="top" zPosition="-50" />
-    <widget name="list" position="614,107" size="510,500" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" enableWrapAround="1" transparent="1" />
-    <eLabel name="" position="606,92" zPosition="-11" size="525,529" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
-    <!-- /*Buttons-->
-    <eLabel position="241,0" zPosition="-1" size="6,40" backgroundColor="metrixRed" transparent="0" />
-    <eLabel position="458,0" zPosition="-1" size="6,40" backgroundColor="metrixGreen" transparent="0" />
-    <widget name="red" position="258,10" size="160,30" zPosition="1" font="SetrixHD; 22" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="green" position="472,10" size="220,30" zPosition="1" font="SetrixHD; 22" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
-    <!--Button */-->
-  </screen>
+  <eLabel name="" position="0,0" zPosition="-11" size="1281,50" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
+  <ePixmap position="267,114" size="256,256" pixmap="ts-MetrixHD/icons/plugin.png" alphatest="blend" />
+  <!-- /*ClockWidget-->
+  <eLabel position="208,91" zPosition="-1" size="366,300" backgroundColor="metrixBackground" transparent="0" />
+  <!-- /*ClockWidget-->
+  <widget source="global.CurrentTime" render="Label" position="415,401" size="169,80" font="SetrixHD; 60" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="265,444" size="148,29" font="SetrixHD; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+    <convert type="ClockToText">Format: %e. %B</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="287,415" size="125,30" font="SetrixHD; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+    <convert type="ClockToText">Format: %A</convert>
+  </widget>
+  <eLabel position="208,410" zPosition="-1" size="368,70" backgroundColor="metrixBackground" transparent="0" />
+  <!--ClockWidget */-->
+  <eLabel text="Plugin browser" position="60,639" size="1273,296" font="SetrixHD; 150" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="top" zPosition="-50" />
+  <!--widget name="list" position="614,107" size="510,500" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" enableWrapAround="1" transparent="1" /-->
+  <widget source="pluginlist" render="Listbox" position="614,107" size="510,500" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" enableWrapAround="1" transparent="1">
+    <convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+  </widget>
+  <eLabel name="" position="606,92" zPosition="-11" size="525,529" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
+  <!-- /*Buttons-->
+  <eLabel position="241,0" zPosition="-1" size="6,40" backgroundColor="metrixRed" transparent="0" />
+  <eLabel position="458,0" zPosition="-1" size="6,40" backgroundColor="metrixGreen" transparent="0" />
+  <widget name="red" position="258,10" size="160,30" zPosition="1" font="SetrixHD; 22" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="green" position="472,10" size="220,30" zPosition="1" font="SetrixHD; 22" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+  <!--Button */-->
+</screen>
   <screen name="PluginDownloadBrowser" position="0,0" size="1280,720" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel position="40,25" zPosition="-10" size="1205,650" backgroundColor="metrixBackground" transparent="0" />
     <widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="SetrixHD; 50" halign="left" backgroundColor="metrixBackground" transparent="1">
@@ -4687,11 +4704,11 @@
     <widget source="parent.ServiceEvent" render="Label" position="6,3" size="120,34" font="Regular;15" halign="center" valign="top">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="parent.ServiceEvent" render="TSLCDPicon" chSel="on" position="0,1" size="132,62" zPosition="1">
+    <!--widget source="parent.ServiceEvent" render="TSLCDPicon" chSel="on" position="0,1" size="132,62" zPosition="1">
       <convert type="TSRefString">CurrentRef</convert>
       <convert type="TSRotator">
       </convert>
-    </widget>
+    </widget-->
     <eLabel position="0,46" size="132,1" backgroundColor="white" zPosition="2" />
     <widget source="parent.ServiceEvent" render="Progress" position="68,51" size="55,8" borderWidth="1" backgroundColor="black">
       <convert type="EventTime">Progress</convert>
@@ -4711,11 +4728,11 @@
     <widget source="global.CurrentTime" render="Label" position="0,37" size="96,27" font="Regular;32" halign="center" valign="center" foregroundColor="un1e90ff" backgroundColor="black">
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="parent.ServiceEvent" render="TSLCDPicon" chSel="on" position="-2,1" size="100,64" zPosition="1">
+    <!--widget source="parent.ServiceEvent" render="TSLCDPicon" chSel="on" position="-2,1" size="100,64" zPosition="1">
       <convert type="TSRefString">CurrentRef</convert>
       <convert type="TSRotator">
       </convert>
-    </widget>
+    </widget-->
     <widget source="session.RecordState" render="FixedLabel" text=" " position="0,38" zPosition="1" size="96,26">
       <convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
       <convert type="ConditionalShowHide">Blink</convert>
@@ -4735,11 +4752,11 @@
     <widget source="global.CurrentTime" render="Label" position="6,44" size="58,20" font="Regular;17" halign="left" valign="top">
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="session.CurrentService" render="TSLCDPicon" position="0,0" size="132,62" zPosition="1">
+    <!--widget source="session.CurrentService" render="TSLCDPicon" position="0,0" size="132,62" zPosition="1">
       <convert type="ServiceName">Reference</convert>
       <convert type="ServiceName">Name</convert>
       <convert type="TSRotator">10</convert>
-    </widget>
+    </widget-->
     <widget source="session.RecordState" render="FixedLabel" text=" " position="6,44" zPosition="1" size="58,20">
       <convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
       <convert type="ConditionalShowHide">Blink</convert>
@@ -4756,11 +4773,11 @@
     <widget source="global.CurrentTime" render="Label" position="0,37" size="96,27" font="Regular;32" halign="center" valign="center" foregroundColor="un1e90ff" backgroundColor="black">
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="session.CurrentService" render="TSLCDPicon" position="-2,1" size="100,64" zPosition="1">
+    <!--widget source="session.CurrentService" render="TSLCDPicon" position="-2,1" size="100,64" zPosition="1">
       <convert type="ServiceName">Reference</convert>
       <convert type="ServiceName">Name</convert>
       <convert type="TSRotator">10</convert>
-    </widget>
+    </widget-->
     <widget source="session.RecordState" render="FixedLabel" text=" " position="0,38" zPosition="1" size="96,26">
       <convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
       <convert type="ConditionalShowHide">Blink</convert>
@@ -4911,9 +4928,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, (720-wsizey)/2))
 		</applet>
   </screen>
   <!-- *** EXTERNAL PLUGINS *** -->
-  <include filename="ts-MetrixHD/modules/skin_extplugins.xml" />
+  <!--include filename="ts-MetrixHD/modules/skin_extplugins.xml" /-->
   <!-- *** TSPANEL  *** -->
-  <include filename="ts-MetrixHD/modules/skin_tspanel.xml" />
+  <!--include filename="ts-MetrixHD/modules/skin_tspanel.xml" /-->
   <!-- *** TSmedia  *** -->
-  <include filename="ts-MetrixHD/modules/skin_tsmedia.xml" />
+  <!--include filename="ts-MetrixHD/modules/skin_tsmedia.xml" /-->
 </skin>
